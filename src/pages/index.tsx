@@ -61,6 +61,17 @@ const IndexPage = (): React.ReactElement => {
           <div className="c-media-text">
             <h1>Darryl Snow</h1>
             <p className="c-tagline">Digital Product Manager</p>
+            <ul className="o-list--unstyled c-link-list">
+              <li>
+                <Icon icon="linkedin" color="" />
+              </li>
+              <li>
+                <Icon icon="github" color="" />
+              </li>
+              <li>
+                <Icon icon="at" color="" />
+              </li>
+            </ul>
             <ul className="o-list--unstyled" style={listStyles}>
               <li>
                 <Icon icon="placeholder" color="green" />
@@ -68,7 +79,7 @@ const IndexPage = (): React.ReactElement => {
               </li>
               <li>
                 <Icon icon="time" color="green" />
-                <span className="u-blink">{time}</span>
+                {time}
               </li>
               <li>
                 <Icon icon="success" color="green" />
