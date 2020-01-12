@@ -485,6 +485,17 @@ h1 {
   fill: var(--colors-highlight);
 }
 
+.c-icon-link svg {
+  fill: var(--colors-body-text);
+  transition: 0.3s fill ease-in-out;
+}
+
+.c-icon-link:active svg,
+.c-icon-link:focus svg,
+.c-icon-link:hover svg {
+  fill: var(--colors-highlight);
+}
+
 .o-list--unstyled {
   list-style-type: none;
   margin: 0;
@@ -504,4 +515,35 @@ h1 {
 
 .c-link-list svg {
   fill: #999;
+}
+
+.c-footer {
+  background-color: #222;
+  color: var(--colors-background);
+  padding: var(--spacing);
+  text-align: center;
+}
+
+.c-footer a {
+  color: var(--colors-background);
+  text-decoration: none;
+  transition: 0.15s color ease-in-out;
+}
+
+.c-footer a:active,
+.c-footer a:focus,
+.c-footer a:hover {
+  color: var(--colors-highlight);
+}
+
+.o-link {
+  color: var(--colors-body-text);
+  text-decoration: none;
+  transition: 0.15s color ease-in-out;
+}
+
+.o-link:active,
+.o-link:focus,
+.o-link:hover {
+  color: var(--colors-highlight);
 }

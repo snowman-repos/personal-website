@@ -6,7 +6,7 @@ import './layout.css'
 const Layout: React.FC = ({ children }) => (
   <>
     <main>{children}</main>
-    <footer>
+    <footer className="c-footer">
       &copy;
       {new Date().getFullYear()}
       ,&nbsp;
