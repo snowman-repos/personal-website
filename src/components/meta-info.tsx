@@ -1,16 +1,21 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Icon from './Icon'
 
-const listStyles = {
-  fontSize: '1.25em',
-  display: 'grid',
-  gridAutoFlow: 'column',
-  gridTemplateRows: '1fr 1fr',
-  gridTemplateColumns: '1fr 1fr',
-  gridRowGap: '0.5em',
-  paddingTop: '0.5rem',
-}
+const List = styled.ul`
+  font-size: 1.25em;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 0.5em;
+  padding-top: 0.5rem;
+
+  & svg {
+    fill: var(--colors-highlight);
+  }
+`
 
 const getTime = (): string => {
   const asiaTimeString: string = new Date().toLocaleString('en-US', { timeZone: 'Asia/Singapore' })
@@ -24,9 +29,9 @@ const MetaInfo = (): React.ReactElement => {
     setTime(getTime())
   }, 60000)
   return (
-    <ul className="o-list--unstyled" style={listStyles}>
+    <List className="o-list--unstyled">
       <li>
-        <Icon icon="placeholder" color="green" />
+        <Icon icon="placeholder" />
         <a
           className="o-link"
           href="https://www.google.com/maps/place/Singapore/@1.3139843,103.5633599,10z/data=!3m1!4b1!4m5!3m4!1s0x31da11238a8b9375:0x887869cf52abf5c4!8m2!3d1.352083!4d103.819836"
@@ -36,18 +41,18 @@ const MetaInfo = (): React.ReactElement => {
         </a>
       </li>
       <li>
-        <Icon icon="time" color="green" />
+        <Icon icon="time" />
         {time}
       </li>
       <li>
-        <Icon icon="success" color="green" />
+        <Icon icon="success" />
         English
       </li>
       <li>
-        <Icon icon="success" color="green" />
+        <Icon icon="success" />
         &#20013;&#25991;
       </li>
-    </ul>
+    </List>
   )
 }
 

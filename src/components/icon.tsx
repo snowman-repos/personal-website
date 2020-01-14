@@ -1,11 +1,28 @@
 import * as React from 'react'
+import styled from 'styled-components'
 
-const Icon = ({ icon, color }: { icon: string; color: string }): React.ReactElement => {
-  const IconElement = require(`../images/icons/${icon}.svg`) as string
+const IconElement = styled.span`
+  & > svg {
+    display: inline-block;
+    height: 1em;
+    margin: 0 0.25em;
+    pointer-events: none;
+    vertical-align: middle;
+  }
+
+  @media (min-width: 55em) {
+    & > svg {
+      margin: 0 0.5em 0 0;
+    }
+  }
+`
+
+const Icon = ({ icon }: { icon: string }): React.ReactElement => {
+  const SVG = require(`../images/icons/${icon}.svg`) as string
   return (
-    <span className={color === 'green' ? 'c-icon c-icon--green' : 'c-icon'}>
-      <IconElement />
-    </span>
+    <IconElement>
+      <SVG />
+    </IconElement>
   )
 }
 

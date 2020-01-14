@@ -4,7 +4,8 @@ type Props = {}
 
 const canvasStyles: React.CSSProperties = {
   left: 0,
-  position: 'absolute',
+  position: 'fixed',
+  pointerEvents: 'none',
   top: 0,
   zIndex: -1,
 }
@@ -85,7 +86,7 @@ class Snowfall extends React.Component<Props> {
   }
 
   render() {
-    return <canvas id="snowfall" ref={this.canvas} style={canvasStyles} />
+    return <canvas ref={this.canvas} style={canvasStyles} />
   }
 }
 

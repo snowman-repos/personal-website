@@ -20,11 +20,7 @@ const ProfilePicture = (): React.ReactElement => {
       }
     }
   `)
-  return (
-    <div className="c-media-image">
-      <Img alt="Darryl Snow" fluid={imageData.placeholderImage.childImageSharp.fluid} style={imageStyles} />
-    </div>
-  )
+  return <Img alt="Darryl Snow" fluid={imageData.placeholderImage.childImageSharp.fluid} style={imageStyles} />
 }
 
 export default ProfilePicture
