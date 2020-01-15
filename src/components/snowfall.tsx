@@ -7,7 +7,7 @@ const canvasStyles: React.CSSProperties = {
   position: 'fixed',
   pointerEvents: 'none',
   top: 0,
-  zIndex: -1,
+  zIndex: 1,
 }
 
 class Snowfall extends React.Component<Props> {

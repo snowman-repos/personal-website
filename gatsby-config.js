@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Website Boilerplate',
-    description: 'A simple website boilerplate.',
+    title: 'Darryl Snow',
+    description: 'Darryl is a digital product manager based in Singapore.',
     author: '@dazsnow',
+    url: 'https://yourweb.expert',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -25,7 +26,7 @@ module.exports = {
         background_color: '#01a78f',
         theme_color: '#01a78f',
         display: 'minimal-ui',
-        icon: '', // This path is relative to the root of the site (e.g. src/images/icon.png).
+        icon: 'src/images/apple-touch-icon.png', // This path is relative to the root of the site (e.g. src/images/icon.png).
       },
     },
     {

@@ -11,7 +11,7 @@ function SEO({
 }: {
   description: string
   lang: string
-  meta: string
+  meta: any
   title: string
 }): React.ReactElement {
   const { site } = useStaticQuery(

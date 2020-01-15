@@ -8,7 +8,9 @@ const Footer = styled.footer`
   background-color: #222;
   color: var(--colors-background);
   padding: var(--spacing);
+  position: relative;
   text-align: center;
+  z-index: var(--z-index-page-content);
 `
 
 const Link = styled.a`
@@ -29,7 +31,7 @@ const Layout: React.FC = ({ children }) => (
     <Footer>
       &copy;
       {new Date().getFullYear()}
-      ,&nbsp;
+      &nbsp;
       <Link href="mailto:darryl@yourweb.expert">Darryl Snow</Link>
     </Footer>
   </>

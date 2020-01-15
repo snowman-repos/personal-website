@@ -364,6 +364,8 @@ template {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   --fonts-heading: 'Work Sans', sans-serif;
   --spacing: 2rem;
+  --z-index-page-content: 2;
+  --z-index-page-snowfall: 1;
 }
 
 body {

@@ -14,6 +14,7 @@ const Container = styled.div`
   text-align: center;
   transition: width 0.15s ease-in-out;
   width: 100%;
+  z-index: var(--z-index-page-content);
 
   @media (min-width: 55em) {
     grid-column-gap: var(--spacing);
