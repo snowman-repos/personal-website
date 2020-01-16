@@ -2,13 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-const imageStyles = {
-  borderRadius: '100%',
-  maxWidth: '200px',
-  textAlign: 'right',
-}
-
-const ProfilePicture = (): React.ReactElement => {
+const ProfilePicture = (props: any): React.ReactElement => {
   const imageData = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "darryl-snow.png" }) {
@@ -20,7 +14,7 @@ const ProfilePicture = (): React.ReactElement => {
       }
     }
   `)
-  return <Img alt="Darryl Snow" fluid={imageData.placeholderImage.childImageSharp.fluid} style={imageStyles} />
+  return <Img alt="Darryl Snow" fluid={imageData.placeholderImage.childImageSharp.fluid} style={props.styles} />
 }
 
 export default ProfilePicture

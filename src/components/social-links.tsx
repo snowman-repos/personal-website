@@ -38,6 +38,7 @@ const List = styled.ul`
   display: inline-block;
   font-size: 2.5em;
   margin: calc(var(--spacing) / 2) 0;
+  transition: 0.15s 0.15s opacity ease-in-out;
 
   & li {
     display: inline-block;
@@ -45,6 +46,12 @@ const List = styled.ul`
 
   & svg {
     fill: var(--colors-icons);
+  }
+
+  .isSticky & {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.15s 0.15s opacity ease-in-out;
   }
 `
 

@@ -11,9 +11,16 @@ const List = styled.ul`
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 0.5em;
   padding-top: 0.5rem;
+  transition: 0.3s 0.15s opacity ease-in-out;
 
   & svg {
     fill: var(--colors-highlight);
+  }
+
+  .isSticky & {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.15s opacity ease-in-out;
   }
 `
 

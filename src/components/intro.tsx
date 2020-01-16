@@ -1,4 +1,6 @@
 import React from 'react'
+// @ts-ignore
+import { Watch } from 'scrollmonitor-react'
 import styled from 'styled-components'
 
 import MetaInfo from './meta-info'
@@ -11,10 +13,16 @@ const Container = styled.div`
   grid-row-gap: var(--spacing);
   grid-template-columns: 1fr;
   grid-template-rows: 200px auto;
+  padding-top: 0.5rem;
   text-align: center;
-  transition: width 0.15s ease-in-out;
+  transition: 0.15s all ease-in-out;
   width: 100%;
   z-index: var(--z-index-page-content);
+
+  &.isSticky {
+    position: fixed;
+    top: 0;
+  }
 
   @media (min-width: 55em) {
     grid-column-gap: var(--spacing);
@@ -23,6 +31,11 @@ const Container = styled.div`
     grid-template-rows: 1fr;
     text-align: left;
     width: 75%;
+
+    &.isSticky {
+      position: fixed;
+      top: 0;
+    }
   }
 `
 
@@ -55,18 +68,42 @@ const ImageContainer = styled.div`
 const Tagline = styled.p`
   font-size: 1.25em;
   margin: 0.5rem 0.1em;
+  transition: 0.15s opacity ease-in-out;
 
   @media (min-width: 55em) {
     font-size: 2em;
   }
-`
 
-class Intro extends React.Component {
+  .isSticky & {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s 0.15s opacity ease-in-out;
+  }
+`
+type MyProps = {
+  isFullyInViewport: boolean
+}
+
+class Intro extends React.Component<MyProps> {
   render() {
+    const isSticky = this.props.isFullyInViewport ? '' : 'isSticky'
+    const imageStyles = this.props.isFullyInViewport
+      ? {
+          borderRadius: '100%',
+          maxWidth: '200px',
+          textAlign: 'right',
+          transition: '0.5s 0.15s all ease-in-out',
+        }
+      : {
+          borderRadius: '100%',
+          maxWidth: '80px',
+          textAlign: 'right',
+          transition: '0.3s all ease-in-out',
+        }
     return (
-      <Container>
+      <Container className={isSticky}>
         <ImageContainer>
-          <ProfilePicture />
+          <ProfilePicture styles={imageStyles} />
         </ImageContainer>
         <div>
           <h1>Darryl Snow</h1>
@@ -79,4 +116,4 @@ class Intro extends React.Component {
   }
 }
 
-export default Intro
+export default Watch(Intro)
