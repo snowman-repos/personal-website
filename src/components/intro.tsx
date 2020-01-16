@@ -19,9 +19,18 @@ const Container = styled.div`
   width: 100%;
   z-index: var(--z-index-page-content);
 
+  h1 {
+    transition: 0.15s font-size ease-in-out;
+  }
+
   &.isSticky {
+    grid-template-rows: auto;
     position: fixed;
     top: 0;
+
+    h1 {
+      font-size: 1.5em;
+    }
   }
 
   @media (min-width: 55em) {
@@ -35,6 +44,10 @@ const Container = styled.div`
     &.isSticky {
       position: fixed;
       top: 0;
+
+      h1 {
+        font-size: 3em;
+      }
     }
   }
 `
@@ -58,9 +71,17 @@ const ImageContainer = styled.div`
     width: 94%;
   }
 
+  .isSticky & {
+    display: none;
+  }
+
   @media (min-width: 55em) {
     & > div:first-child {
       margin: 0 0 0 auto;
+    }
+
+    .isSticky & {
+      display: block;
     }
   }
 `
