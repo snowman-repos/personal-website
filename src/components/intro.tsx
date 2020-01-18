@@ -3,9 +3,13 @@ import React from 'react'
 import { Watch } from 'scrollmonitor-react'
 import styled from 'styled-components'
 
+import Context from '../pages/context'
+
 import MetaInfo from './meta-info'
 import ProfilePicture from './profile-picture'
 import SocialLinks from './social-links'
+
+const PageConsumer = Context.Consumer
 
 const Container = styled.div`
   display: grid;
@@ -42,6 +46,7 @@ const Container = styled.div`
     width: 75%;
 
     &.isSticky {
+      grid-template-columns: 3fr 4fr;
       position: fixed;
       top: 0;
 
@@ -53,22 +58,23 @@ const Container = styled.div`
 `
 
 const ImageContainer = styled.div`
+  border-radius: 100%;
   text-align: right;
 
-  & > div:first-child {
+  .gatsby-image-wrapper {
     margin: 0 auto;
     position: relative;
   }
 
-  & > div:first-child::before {
+  .gatsby-image-wrapper::before {
     background-color: rgba(0, 0, 0, 0.08);
     border-radius: 100%;
     content: '';
-    height: 94%;
+    height: 95%;
     left: 3%;
     position: absolute;
     top: 6%;
-    width: 94%;
+    width: 95%;
   }
 
   .isSticky & {
@@ -76,7 +82,7 @@ const ImageContainer = styled.div`
   }
 
   @media (min-width: 55em) {
-    & > div:first-child {
+    .gatsby-image-wrapper {
       margin: 0 0 0 auto;
     }
 
@@ -113,7 +119,7 @@ class Intro extends React.Component<MyProps> {
           borderRadius: '100%',
           maxWidth: '200px',
           textAlign: 'right',
-          transition: '0.5s 0.15s all ease-in-out',
+          transition: '0.3s all ease-in-out',
         }
       : {
           borderRadius: '100%',
@@ -122,17 +128,22 @@ class Intro extends React.Component<MyProps> {
           transition: '0.3s all ease-in-out',
         }
     return (
-      <Container className={isSticky}>
-        <ImageContainer>
-          <ProfilePicture styles={imageStyles} />
-        </ImageContainer>
-        <div>
-          <h1>Darryl Snow</h1>
-          <Tagline>Digital Product Manager</Tagline>
-          <SocialLinks />
-          <MetaInfo />
-        </div>
-      </Container>
+      <PageConsumer>
+        {(context: any) => (
+          <Container className={isSticky}>
+            <ImageContainer>
+              <ProfilePicture styles={imageStyles} handleClick={context.actions.toggleModal} />
+            </ImageContainer>
+            <div>
+              <h1>Darryl Snow</h1>
+              <Tagline>Digital Product Manager</Tagline>
+              <SocialLinks />
+              <MetaInfo />
+            </div>
+            {context.state.modalOpen ? <p>It's open!</p> : ''}
+          </Container>
+        )}
+      </PageConsumer>
     )
   }
 }

@@ -1,10 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Context from './context'
+
 import Intro from '../components/Intro'
 import Layout from '../templates/layout'
 import SEO from '../components/seo'
 import Snowfall from '../components/snowfall'
+
+const PageProvider = Context.Provider
 
 const VisionSection = styled.section`
   background: #74ebd5;
@@ -32,18 +36,41 @@ const StrategySection = styled.section`
   position: relative;
 `
 
-const IndexPage = (): React.ReactElement => {
-  return (
-    <Layout>
-      <SEO title="Darryl Snow: Digital Product Manager" />
-      <section className="o-section">
-        <Snowfall />
-        <Intro />
-      </section>
-      <VisionSection className="o-section" />
-      <StrategySection className="o-section" />
-    </Layout>
-  )
+class IndexPage extends React.Component {
+  state = {
+    page: {
+      modalOpen: false,
+    },
+  }
+
+  render() {
+    return (
+      <Layout>
+        <SEO title="Darryl Snow: Digital Product Manager" />
+        <PageProvider
+          value={{
+            state: this.state.page,
+            actions: {
+              toggleModal: () => {
+                this.setState(() => ({
+                  page: {
+                    modalOpen: !this.state.page.modalOpen,
+                  },
+                }))
+              },
+            },
+          }}
+        >
+          <section className="o-section">
+            <Snowfall />
+            <Intro />
+          </section>
+          <VisionSection className="o-section" />
+          <StrategySection className="o-section" />
+        </PageProvider>
+      </Layout>
+    )
+  }
 }
 
 export default IndexPage
