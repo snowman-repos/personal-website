@@ -107,11 +107,11 @@ const Tagline = styled.p`
     transition: 0.3s 0.15s opacity ease-in-out;
   }
 `
-type MyProps = {
+type Props = {
   isFullyInViewport: boolean
 }
 
-class Intro extends React.Component<MyProps> {
+class Intro extends React.Component<Props> {
   render() {
     const isSticky = this.props.isFullyInViewport ? '' : 'isSticky'
     const imageStyles = this.props.isFullyInViewport
@@ -140,7 +140,6 @@ class Intro extends React.Component<MyProps> {
               <SocialLinks />
               <MetaInfo />
             </div>
-            {context.state.modalOpen ? <p>It's open!</p> : ''}
           </Container>
         )}
       </PageConsumer>

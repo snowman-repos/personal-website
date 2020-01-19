@@ -368,6 +368,11 @@ template {
   --z-index-page-snowfall: 1;
 }
 
+html.has-open-modal {
+  height: 100vh;
+  overflow: hidden;
+}
+
 body {
   background-color: var(--colors-background);
   color: var(--colors-body-text);

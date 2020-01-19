@@ -5,6 +5,7 @@ import Context from './context'
 
 import Intro from '../components/Intro'
 import Layout from '../templates/layout'
+import Modal from '../components/modal'
 import SEO from '../components/seo'
 import Snowfall from '../components/snowfall'
 
@@ -67,6 +68,7 @@ class IndexPage extends React.Component {
           </section>
           <VisionSection className="o-section" />
           <StrategySection className="o-section" />
+          <Modal isOpen={this.state.page.modalOpen} />
         </PageProvider>
       </Layout>
     )
