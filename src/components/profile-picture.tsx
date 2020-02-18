@@ -41,7 +41,7 @@ const Link = styled.a`
     width: 100%;
   }
 
-  .isSticky & {
+  .is-fixed & {
     &::before {
       color: var(--colors-body-text);
       font-size: 1em;

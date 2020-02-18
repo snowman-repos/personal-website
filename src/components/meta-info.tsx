@@ -23,7 +23,7 @@ const List = styled.ul`
     margin: 0;
   }
 
-  .isSticky & {
+  .is-fixed & {
     opacity: 0;
     pointer-events: none;
     transition: 0.15s opacity ease-in-out;

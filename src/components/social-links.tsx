@@ -48,7 +48,7 @@ const List = styled.ul`
     fill: var(--colors-icons);
   }
 
-  .isSticky & {
+  .is-fixed & {
     opacity: 0;
     pointer-events: none;
     transition: 0.15s 0.15s opacity ease-in-out;

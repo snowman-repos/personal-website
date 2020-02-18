@@ -27,7 +27,7 @@ const Container = styled.div`
     transition: 0.15s font-size ease-in-out;
   }
 
-  &.isSticky {
+  &.is-fixed {
     grid-template-rows: auto;
     position: fixed;
     top: 0;
@@ -45,7 +45,7 @@ const Container = styled.div`
     text-align: left;
     width: 75%;
 
-    &.isSticky {
+    &.is-fixed {
       grid-template-columns: 3fr 4fr;
       position: fixed;
       top: 0;
@@ -77,7 +77,7 @@ const ImageContainer = styled.div`
     width: 95%;
   }
 
-  .isSticky & {
+  .is-fixed & {
     display: none;
   }
 
@@ -86,7 +86,7 @@ const ImageContainer = styled.div`
       margin: 0 0 0 auto;
     }
 
-    .isSticky & {
+    .is-fixed & {
       display: block;
     }
   }
@@ -101,7 +101,7 @@ const Tagline = styled.p`
     font-size: 2em;
   }
 
-  .isSticky & {
+  .is-fixed & {
     opacity: 0;
     pointer-events: none;
     transition: 0.3s 0.15s opacity ease-in-out;
@@ -113,7 +113,7 @@ type Props = {
 
 class Intro extends React.Component<Props> {
   render() {
-    const isSticky = this.props.isFullyInViewport ? '' : 'isSticky'
+    const isFixed = this.props.isFullyInViewport ? '' : 'is-fixed'
     const imageStyles = this.props.isFullyInViewport
       ? {
           borderRadius: '100%',
@@ -130,7 +130,7 @@ class Intro extends React.Component<Props> {
     return (
       <PageConsumer>
         {(context: any) => (
-          <Container className={isSticky}>
+          <Container className={isFixed}>
             <ImageContainer>
               <ProfilePicture styles={imageStyles} handleClick={context.actions.toggleModal} />
             </ImageContainer>
