@@ -1,7 +1,9 @@
 import * as React from 'react'
+import Emoji from 'react-emoji-render'
 import styled from 'styled-components'
 
 import Context from '../pages/context'
+import RandomFacts from './random-facts'
 
 const PageConsumer = Context.Consumer
 
@@ -68,62 +70,13 @@ const CloseButton = styled.button`
   }
 `
 
-const FactContainer = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  opacity: 0;
-  height: 100vh;
-  width: 100vw;
-
-  .is-open & {
-    opacity: 1;
-    transition: 0.15s 0.45s opacity ease-out;
-  }
-
-  h2 {
-    color: var(--colors-background);
-    font-size: 3em;
-
-    @media (min-width: 55em) {
-      font-size: 4em;
-    }
-  }
-`
-
 type Props = {
   isOpen: boolean
 }
 
-const funFacts = [
-  {
-    content: '<h2>fact 1</h2>',
-  },
-  {
-    content: '<h2>fact 2</h2>',
-  },
-  {
-    content: '<h2>fact 3</h2>',
-  },
-  {
-    content: '<h2>fact 4</h2>',
-  },
-]
-
 class Modal extends React.Component<Props> {
   constructor(props: Props) {
     super(props)
-  }
-
-  pickRandomFact() {
-    const fact = funFacts[Math.ceil(Math.random() * (funFacts.length - 1))]
-    return (
-      <FactContainer
-        dangerouslySetInnerHTML={{
-          __html: fact.content,
-        }}
-      />
-    )
   }
 
   render() {
@@ -133,7 +86,7 @@ class Modal extends React.Component<Props> {
       <PageConsumer>
         {(context: any) => (
           <FullScreen className={this.props.isOpen ? 'is-open' : ''}>
-            {this.pickRandomFact()}
+            <RandomFacts />
             <CloseButton onClick={context.actions.toggleModal} />
           </FullScreen>
         )}
