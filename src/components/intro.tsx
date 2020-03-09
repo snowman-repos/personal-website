@@ -1,6 +1,6 @@
 import React from 'react'
 // @ts-ignore
-import { Watch } from 'scrollmonitor-react'
+// import { Watch } from 'scrollmonitor-react'
 import styled from 'styled-components'
 
 import Context from '../pages/context'
@@ -46,7 +46,7 @@ const Container = styled.div`
     width: 75%;
 
     &.is-fixed {
-      grid-template-columns: 3fr 4fr;
+      grid-template-columns: 3fr 5fr;
       position: fixed;
       top: 0;
 
@@ -147,4 +147,4 @@ class Intro extends React.Component<Props> {
   }
 }
 
-export default Watch(Intro)
+export default Intro

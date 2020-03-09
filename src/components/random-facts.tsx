@@ -86,7 +86,7 @@ type Props = {}
 
 const RandomFacts = (props: any): React.ReactElement => {
   const getRandomNumber = () => {
-    return Math.ceil(Math.random() * 12)
+    return Math.ceil(Math.random() * 13)
   }
 
   const renderFact = () => {
@@ -203,6 +203,21 @@ const RandomFacts = (props: any): React.ReactElement => {
             I like swimming
             <br />
             <Emoji text=":swimmer:" />
+          </>
+        )
+        break
+      case 12:
+        return (
+          <>
+            I am the inventor of the&nbsp;
+            <Link
+              href="https://twitter.com/egyptian_bot"
+              title="All the old paintings on the tombs they do the sand dance, don't you know."
+            >
+              Walk Like an Egyptian Twitter Bot
+            </Link>
+            <br />
+            <Emoji text=":robot:" />
           </>
         )
         break
