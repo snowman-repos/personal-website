@@ -77,7 +77,6 @@ const Layout: React.FC = ({ children }) => {
   for (let i = 0; i < 5; i++) {
     theMountains.push(renderMountain(i))
   }
-  console.log(theMountains)
   return (
     <>
       <main>{children}</main>

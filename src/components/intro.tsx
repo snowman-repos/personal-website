@@ -3,7 +3,7 @@ import React from 'react'
 // import { Watch } from 'scrollmonitor-react'
 import styled from 'styled-components'
 
-import Context from '../pages/context'
+import Context from '../context/context'
 
 import MetaInfo from './meta-info'
 import ProfilePicture from './profile-picture'

@@ -2,7 +2,7 @@ import * as React from 'react'
 import Emoji from 'react-emoji-render'
 import styled from 'styled-components'
 
-import Context from '../pages/context'
+import Context from '../context/context'
 import RandomFacts from './random-facts'
 
 const PageConsumer = Context.Consumer
@@ -77,11 +77,15 @@ type Props = {
 class Modal extends React.Component<Props> {
   constructor(props: Props) {
     super(props)
+    const html = null
+  }
+
+  componentDidMount() {
+    this.html = document.getElementsByTagName('html')[0]
+    this.props.isOpen ? this.html.classList.add('has-open-modal') : this.html.classList.remove('has-open-modal')
   }
 
   render() {
-    const html: HTMLElement = document.getElementsByTagName('html')[0]
-    this.props.isOpen ? html.classList.add('has-open-modal') : html.classList.remove('has-open-modal')
     return (
       <PageConsumer>
         {(context: any) => (

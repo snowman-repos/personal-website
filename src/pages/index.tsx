@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Context from './context'
+import Context from '../context/context'
 
 import Intro from '../components/Intro'
 import Layout from '../templates/layout'
