@@ -39,6 +39,7 @@ function SEO({
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const image = placeholderImage.childImageSharp.fixed.src
 
   return (
     <Helmet
@@ -63,6 +64,14 @@ function SEO({
         {
           property: 'og:type',
           content: 'website',
+        },
+        {
+          property: 'og:image',
+          content: `https://darrylsnow.com${image}`,
+        },
+        {
+          property: 'og:url',
+          content: site.siteMetadata.url,
         },
         {
           name: 'twitter:card',
@@ -91,7 +100,7 @@ function SEO({
             "email": "${site.siteMetadata.email}",
             "url": "${site.siteMetadata.url}",
             "telephone": "${site.siteMetadata.telephone}",
-            "image": "https://darrylsnow.com${placeholderImage.childImageSharp.fixed.src}",
+            "image": "https://darrylsnow.com${image}",
             "jobTitle": "Senior Product Manager",
             "worksFor": "Pivotal",
             "workLocation": {
