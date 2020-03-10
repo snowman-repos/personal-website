@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Icon from './Icon'
+import Icon from './icon'
 
 const List = styled.ul`
   font-size: 1.25em;
