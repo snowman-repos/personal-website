@@ -116,12 +116,22 @@ function SEO({
               "description": "Solving unseen problems. Overseeing the entire life cycle of a product, from discovery through inception to delivery and optimization.",
               "qualifications": "A-CSPO",
               "estimatedSalary": {
-                "type": "@MonetaryAmount",
+                "@type": "MonetaryAmountDistribution",
+                "name": "base",
                 "currency": "USD",
-                "maxValue": "150",
-                "minValue": "65"
+                "unitText": "YEAR",
+                "percentile10": "65000",
+                "percentile25": "86000",
+                "median": "107000",
+                "percentile75": "128000",
+                "percentile90": "150000"
               },
-              "occupationLocation": "Singapore",
+              "occupationLocation": [
+              {
+                  "@type": "City",
+                  "name": "Mountain View"
+                }
+              ],
               "responsibilities": [
                 "product strategy",
                 "prioritization",

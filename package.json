@@ -1,9 +1,9 @@
 {
-  "name": "website-boilerplate",
+  "name": "personal-website",
   "private": true,
-  "description": "A simple website boilerplate.",
+  "description": "Personal website of Darryl Snow, a digital product manager based in Singapore.",
   "version": "0.1.0",
-  "author": "Darryl Snow <darryl@yourweb.expert>",
+  "author": "Darryl Snow <dazsnow@gmail.com>",
   "dependencies": {
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^4.4.2",
@@ -63,9 +63,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/darryl-snow/website-boilerplate"
+    "url": "https://github.com/darryl-snow/personal-website"
   },
   "bugs": {
-    "url": "https://github.com/darryl-snow/website-boilerplate/issues"
+    "url": "https://github.com/darryl-snow/personal-website/issues"
   }
 }
