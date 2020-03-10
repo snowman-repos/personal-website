@@ -11,14 +11,15 @@ const Link = styled.a`
     bottom: 1.5em;
     color: var(--colors-highlight);
     content: 'more?';
-    display: block;
+    display: none;
     font-family: var(--fonts-heading);
     font-size: 2em;
-    max-width: 197px;
+    max-width: 200px;
     opacity: 0;
     position: absolute;
-    right: 0;
+    right: 50%;
     text-align: center;
+    transform: translateX(50%);
     transition: 0.25s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
     width: 100%;
   }
@@ -33,10 +34,12 @@ const Link = styled.a`
     display: block;
     filter: blur(1em) opacity(0);
     height: 95%;
-    max-width: 197px;
+    max-width: 200px;
     mix-blend-mode: soft-light;
     position: absolute;
-    right: 0;
+    right: 50%;
+    outline: thin solid red;
+    transform: translateX(50%);
     transition: 0.15s filter ease-in-out;
     width: 100%;
   }
@@ -60,6 +63,18 @@ const Link = styled.a`
     }
     &::after {
       filter: blur(1em) opacity(1);
+    }
+  }
+
+  @media (min-width: 55em) {
+    &::before {
+      display: block;
+      right: 0;
+      transform: translateX(0);
+    }
+    &::after {
+      right: 0;
+      transform: translateX(0);
     }
   }
 `

@@ -14,7 +14,7 @@ function SEO({
   meta: any
   title: string
 }): React.ReactElement {
-  const { site } = useStaticQuery(
+  const { site, placeholderImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -22,6 +22,16 @@ function SEO({
             title
             description
             author
+            url
+            email
+            telephone
+          }
+        }
+        placeholderImage: file(relativePath: { eq: "darryl-snow--profile.jpeg" }) {
+          childImageSharp {
+            fixed(width: 200) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }
@@ -71,7 +81,110 @@ function SEO({
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "http://schema.org",
+            "@type": "Person",
+            "name": "${site.siteMetadata.title}",
+            "email": "${site.siteMetadata.email}",
+            "url": "${site.siteMetadata.url}",
+            "telephone": "${site.siteMetadata.telephone}",
+            "image": "https://darrylsnow.com${placeholderImage.childImageSharp.fixed.src}",
+            "jobTitle": "Senior Product Manager",
+            "worksFor": "Pivotal",
+            "workLocation": {
+              "@type": "Place",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Singapore",
+                "streetAddress": "109 North Bridge Rd, Level 6 WeWork Funan",
+                "postalCode": "179097"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "1.2913416",
+                "longitude": "103.8481462"
+              },
+              "logo": "https://d1fto35gcfffzn.cloudfront.net/tanzu/labs-logo-tanzu-style.svg",
+              "telephone": "+65 6817 5030"
+            },
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "Digital Product Manager",
+              "description": "Solving unseen problems. Overseeing the entire life cycle of a product, from discovery through inception to delivery and optimization.",
+              "qualifications": "A-CSPO",
+              "estimatedSalary": {
+                "type": "@MonetaryAmount",
+                "currency": "USD",
+                "maxValue": "150",
+                "minValue": "65"
+              },
+              "occupationLocation": "Singapore",
+              "responsibilities": [
+                "product strategy",
+                "prioritization",
+                "facilitation",
+                "stakeholder management",
+                "lean planning",
+                "data analysis",
+                "reporting"
+              ],
+              "skills": [
+                "product mindset",
+                "problem solving",
+                "leadership",
+                "communication",
+                "decisiveness",
+                "technical understanding",
+                "marketing",
+                "prioritization",
+                "proactivity",
+                "conflict mediation",
+                "agile",
+                "business acumen",
+                "persuasion",
+                "negotiation"
+              ]
+            },
+            "alumniOf": "University of Manchester",
+            "gender": "male",
+            "sameAs": [
+              "https://www.linkedin.com/in/darrylsnow/",
+              "https://github.com/darryl-snow/",
+              "https://twitter.com/dazsnow/"
+            ],
+            "knowsLanguage": [
+              {
+                "@type": "Language",
+                "name": "English",
+                "alternateName": "en"
+              },
+              {
+                "@type": "Language",
+                "name": "Chinese",
+                "alternateName": "zh"
+              }
+            ],
+            "knowsAbout": [
+              "Web technology",
+              "Web apps",
+              "PWA",
+              "Progressive Web Apps",
+              "Product Management",
+              "Product Strategy",
+              "Beer",
+              "Brewing",
+              "Cooking",
+              "China",
+              "Sichuan food",
+              "Investing"
+            ]
+          }
+        `}
+      </script>
+    </Helmet>
   )
 }
 

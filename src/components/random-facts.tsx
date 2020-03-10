@@ -4,8 +4,10 @@ import styled from 'styled-components'
 
 const FactContainer = styled.div`
   align-items: center;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
+  padding: 0 5vw;
   position: relative;
   opacity: 0;
   height: 100vh;
@@ -148,9 +150,9 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 6:
         return (
           <>
-            I designed&nbsp;
+            I designed the logo for&nbsp;
             <Link href="https://en.wikipedia.org/wiki/Snow_(beer)" title="Guess how I got this gig...">
-              the logo for Snow beer
+              Snow beer
             </Link>
             <br />
             <small>
