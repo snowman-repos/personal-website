@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Context from '../context/context'
 
-import Intro from '../components/Intro'
+import Intro from '../components/intro'
 import Layout from '../templates/layout'
 import Modal from '../components/modal'
 import SEO from '../components/seo'
