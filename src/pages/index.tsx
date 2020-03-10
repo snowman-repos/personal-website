@@ -21,7 +21,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Darryl Snow: Digital Product Manager" />
+        <SEO title="Digital Product Manager" />
         <PageProvider
           value={{
             state: this.state.page,
