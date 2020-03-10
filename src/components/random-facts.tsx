@@ -123,13 +123,14 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 4:
         return (
           <>
-            I was&nbsp;
+            I was Time Magazine&nbsp;
             <Link
               href="http://content.time.com/time/specials/packages/0,28757,2019341,00.html"
               title="I'm pretty sure they were referring to me..."
             >
-              Time Magazine Person of the Year in 2006
+              Person of the Year
             </Link>
+            &nbsp;in 2006
             <br />
             <Emoji text=":medal:" />
           </>
