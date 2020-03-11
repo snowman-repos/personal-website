@@ -27,7 +27,7 @@ function SEO({
             telephone
           }
         }
-        placeholderImage: file(relativePath: { eq: "darryl-snow--profile.jpeg" }) {
+        placeholderImage: file(relativePath: { eq: "darryl-snow.jpg" }) {
           childImageSharp {
             fixed(width: 200) {
               ...GatsbyImageSharpFixed
