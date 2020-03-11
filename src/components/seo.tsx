@@ -89,6 +89,10 @@ function SEO({
           name: 'twitter:description',
           content: metaDescription,
         },
+        {
+          name: 'twitter:image',
+          content: `https://darrylsnow.com${image}`,
+        },
       ].concat(meta)}
     >
       <script type="application/ld+json">
