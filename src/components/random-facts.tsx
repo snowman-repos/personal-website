@@ -88,7 +88,7 @@ type Props = {}
 
 const RandomFacts = (props: any): React.ReactElement => {
   const getRandomNumber = () => {
-    return Math.ceil(Math.random() * 13)
+    return Math.ceil(Math.random() * 14)
   }
 
   const renderFact = () => {
@@ -221,6 +221,19 @@ const RandomFacts = (props: any): React.ReactElement => {
             </Link>
             <br />
             <Emoji text=":robot:" />
+          </>
+        )
+        break
+      case 13:
+        return (
+          <>
+            I once&nbsp;
+            <Link href="https://youtu.be/XwJ4tcCHQHg" title="I was the lead role, taught him everything he knows">
+              co-starred
+            </Link>
+            &nbsp;in a production with Henry Cavill
+            <br />
+            <Emoji text=":superhero:" />
           </>
         )
         break
