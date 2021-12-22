@@ -88,7 +88,7 @@ type Props = {}
 
 const RandomFacts = (props: any): React.ReactElement => {
   const getRandomNumber = () => {
-    return Math.ceil(Math.random() * 14)
+    return Math.ceil(Math.random() * 30)
   }
 
   const renderFact = () => {
@@ -237,6 +237,150 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
+      case 14:
+        return (
+          <>
+            I once won a horse spine in a game of poker.
+            <br />
+            <Emoji text=":horse:" />
+          </>
+        )
+        break
+      case 15:
+        return (
+          <>
+            I used to have a pet Macaw that could fold clothes.
+            <br />
+            <Emoji text=":parrot:" />
+          </>
+        )
+        break
+      case 16:
+        return (
+          <>
+            I have a dog called Fattypants.
+            <br />
+            <Emoji text=":dog:" />
+          </>
+        )
+        break
+      case 17:
+        return (
+          <>
+            I was gifted an Apple Watch by Tim Cook.
+            <br />
+            <Emoji text=":watch:" />
+          </>
+        )
+        break
+      case 18:
+        return (
+          <>
+            I have travelled to 31 countries.
+            <br />
+            <Emoji text=":globe_showing_asia-australia:" />
+          </>
+        )
+        break
+      case 19:
+        return (
+          <>
+            I set up my own company at age 16 to pay for university.
+            <br />
+            <Emoji text=":money_with_wings:" />
+          </>
+        )
+        break
+      case 20:
+        return (
+          <>
+            I once ran myself over with a jet ski.
+            <br />
+            <Emoji text=":water_wave:" />
+          </>
+        )
+        break
+      case 21:
+        return (
+          <>
+            I got my first credit card, and first paid tax, at age 34.
+            <br />
+            <Emoji text=":credit_card:" />
+          </>
+        )
+        break
+      case 22:
+        return (
+          <>
+            I will eat any part of any animal or vegetable. Except potato.
+            <br />
+            <Emoji text=":potato:" />
+          </>
+        )
+        break
+      case 23:
+        return (
+          <>
+            I once got dysentery after drinking from a mountain stream.
+            <br />
+            <Emoji text=":mountain_snow:" />
+          </>
+        )
+        break
+      case 24:
+        return (
+          <>
+            I was once tricked into&nbsp;
+            <Link href="https://youtu.be/jHe8DPAIvbs" title="Watch the fateful song...">
+              singing a song
+            </Link>
+            &nbsp;with a 6 year old girl on live TV.
+          </>
+        )
+        break
+      case 25:
+        return (
+          <>
+            I once spent a night in a Beijing jail cell after refusing to apologise on behalf of the 8-nation alliance for burning down the Old Summer Palace in 1860.
+            <br />
+            <Emoji text=":police_officer:" />
+          </>
+        )
+        break
+      case 26:
+        return (
+          <>
+            I sometimes like to sleep halfway down the bed so that my feet dangle off the end because it makes me feel tall.
+            <br />
+            <Emoji text=":sleeping_bed:" />
+          </>
+        )
+        break
+      case 27:
+        return (
+          <>
+            My hand-eye coordination is so bad that I brush my teeth by moving my head instead of moving the toothbrush.
+            <br />
+            <Emoji text=":tooth:" />
+          </>
+        )
+        break
+      case 28:
+        return (
+          <>
+            Despite 36 years of practice, I'm still no good at tying shoe laces.
+            <br />
+            <Emoji text=":running_shoe:" />
+          </>
+        )
+        break
+      case 29:
+        return (
+          <>
+            I once smuggled a 2.2m man into a music festival using a suitcase and a fake ID.
+          </>
+        )
+          break
       default:
         return (
           <>
