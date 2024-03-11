@@ -16,7 +16,7 @@ const ContactMethods = [
   },
   {
     icon: 'at',
-    link: 'malto:dazsnow@gmail.com',
+    link: 'malto:0nkn4ztf@anonaddy.com',
     title: 'Email me',
   },
 ]

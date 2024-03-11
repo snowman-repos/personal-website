@@ -2,9 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Darryl Snow',
     description: 'Darryl is a senior product manager at Pivotal Labs, Singapore.',
-    author: '@dazsnow',
+    author: 'Darryl Snow',
     url: 'https://darrylsnow.com',
-    email: 'dazsnow@gmail.com',
+    email: '0nkn4ztf@anonaddy.com',
     telephone: '+65 9164 8926',
   },
   plugins: [

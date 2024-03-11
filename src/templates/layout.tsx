@@ -85,7 +85,7 @@ const Layout: React.FC = ({ children }) => {
         &copy;
         {new Date().getFullYear()}
         &nbsp;
-        <Link href="mailto:darryl@yourweb.expert">Darryl Snow</Link>
+        <Link href="mailto:0nkn4ztf@anonaddy.com">Darryl Snow</Link>
       </Footer>
     </>
   )

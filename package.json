@@ -3,7 +3,7 @@
   "private": true,
   "description": "Personal website of Darryl Snow, a digital product manager based in Singapore.",
   "version": "0.1.0",
-  "author": "Darryl Snow <dazsnow@gmail.com>",
+  "author": "Darryl Snow <0nkn4ztf@anonaddy.com>",
   "dependencies": {
     "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^4.4.2",

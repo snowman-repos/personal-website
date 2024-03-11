@@ -176,7 +176,6 @@ function SEO({
             "sameAs": [
               "https://www.linkedin.com/in/darrylsnow/",
               "https://github.com/darryl-snow/",
-              "https://twitter.com/dazsnow/"
             ],
             "knowsLanguage": [
               {
