@@ -88,7 +88,7 @@ type Props = {}
 
 const RandomFacts = (props: any): React.ReactElement => {
   const getRandomNumber = () => {
-    return Math.ceil(Math.random() * 30)
+    return Math.ceil(Math.random() * 26)
   }
 
   const renderFact = () => {
@@ -96,7 +96,7 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 1:
         return (
           <>
-            I like brewing beer
+            I brew my own beer
             <br />
             <Emoji text=":beer:" />
           </>
@@ -105,7 +105,8 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 2:
         return (
           <>
-            I once delayed a Chinese military aircraft by accidentally bowling a sack of pomelos down the runway...
+            I once delayed a Chinese military aircraft by accidentally bowling a
+            sack of pomelos down the runway...
             <br />
             <Emoji text=":airplane:" />
           </>
@@ -114,7 +115,8 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 3:
         return (
           <>
-            I once dressed up as a rabbit, walked into a supermarket, and bought all of the carrots.
+            I once dressed up as a rabbit, walked into a supermarket, and bought
+            all of the carrots.
             <br />
             <Emoji text=":rabbit:" />
           </>
@@ -140,7 +142,10 @@ const RandomFacts = (props: any): React.ReactElement => {
         return (
           <>
             I like listening to&nbsp;
-            <Link href="https://youtu.be/s36eQwgPNSE" title="Listen to my totally tubular playlist">
+            <Link
+              href="https://youtu.be/s36eQwgPNSE"
+              title="Listen to my totally tubular playlist"
+            >
               80's music
             </Link>
             <br />
@@ -152,7 +157,10 @@ const RandomFacts = (props: any): React.ReactElement => {
         return (
           <>
             I designed the logo for&nbsp;
-            <Link href="https://en.wikipedia.org/wiki/Snow_(beer)" title="Guess how I got this gig...">
+            <Link
+              href="https://en.wikipedia.org/wiki/Snow_(beer)"
+              title="Guess how I got this gig..."
+            >
               Snow beer
             </Link>
             <br />
@@ -167,7 +175,7 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 7:
         return (
           <>
-            I like eating weird things...
+            I like eating unusual things...
             <br />
             <Emoji text=":brain:" />
           </>
@@ -194,7 +202,7 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 10:
         return (
           <>
-            I don't like reading fiction
+            I like reading non-fiction
             <br />
             <Emoji text=":book:" />
           </>
@@ -212,23 +220,11 @@ const RandomFacts = (props: any): React.ReactElement => {
       case 12:
         return (
           <>
-            I am the inventor of the&nbsp;
-            <Link
-              href="https://twitter.com/egyptian_bot"
-              title="All the old paintings on the tombs they do the sand dance, don't you know."
-            >
-              Walk Like an Egyptian Twitter Bot
-            </Link>
-            <br />
-            <Emoji text=":robot:" />
-          </>
-        )
-        break
-      case 13:
-        return (
-          <>
             I once&nbsp;
-            <Link href="https://youtu.be/XwJ4tcCHQHg" title="I was the lead role, taught him everything he knows">
+            <Link
+              href="https://youtu.be/XwJ4tcCHQHg"
+              title="I was the lead role, taught him everything he knows"
+            >
               co-starred
             </Link>
             &nbsp;in a production with Henry Cavill
@@ -237,16 +233,7 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 14:
-        return (
-          <>
-            I once won a horse spine in a game of poker.
-            <br />
-            <Emoji text=":horse:" />
-          </>
-        )
-        break
-      case 15:
+      case 13:
         return (
           <>
             I used to have a pet Macaw that could fold clothes.
@@ -255,7 +242,7 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 16:
+      case 14:
         return (
           <>
             I have a dog called Fattypants.
@@ -264,16 +251,7 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 17:
-        return (
-          <>
-            I was gifted an Apple Watch by Tim Cook.
-            <br />
-            <Emoji text=":watch:" />
-          </>
-        )
-        break
-      case 18:
+      case 15:
         return (
           <>
             I have travelled to 31 countries.
@@ -282,7 +260,7 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 19:
+      case 16:
         return (
           <>
             I set up my own company at age 16 to pay for university.
@@ -291,7 +269,7 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 20:
+      case 17:
         return (
           <>
             I once ran myself over with a jet ski.
@@ -300,16 +278,16 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 21:
+      case 18:
         return (
           <>
-            I got my first credit card, and first paid tax, at age 34.
+            I got my first credit card at age 34.
             <br />
             <Emoji text=":credit_card:" />
           </>
         )
         break
-      case 22:
+      case 19:
         return (
           <>
             I will eat any part of any animal or vegetable. Except potato.
@@ -318,7 +296,7 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
-      case 23:
+      case 20:
         return (
           <>
             I once got dysentery after drinking from a mountain stream.
@@ -327,65 +305,63 @@ const RandomFacts = (props: any): React.ReactElement => {
           </>
         )
         break
+      case 21:
+        return (
+          <>
+            I once spent a night in a Beijing jail cell after refusing to
+            apologise on behalf of the 8-nation alliance for burning down the
+            Old Summer Palace in 1860.
+            <br />
+            <Emoji text=":police_officer:" />
+          </>
+        )
+        break
+      case 22:
+        return (
+          <>
+            I sometimes like to sleep halfway down the bed so that my feet
+            dangle off the end because it makes me feel tall.
+            <br />
+            <Emoji text=":sleeping_bed:" />
+          </>
+        )
+        break
+      case 23:
+        return (
+          <>
+            My hand-eye coordination is so bad that I brush my teeth by moving
+            my head instead of moving the toothbrush.
+            <br />
+            <Emoji text=":tooth:" />
+          </>
+        )
+        break
       case 24:
         return (
           <>
-            I was once tricked into&nbsp;
-            <Link href="https://youtu.be/jHe8DPAIvbs" title="Watch the fateful song...">
-              singing a song
-            </Link>
-            &nbsp;with a 6 year old girl on live TV.
+            Despite over 38 years of practice, I'm still no good at tying shoe
+            laces.
+            <br />
+            <Emoji text=":running_shoe:" />
           </>
         )
         break
       case 25:
         return (
           <>
-            I once spent a night in a Beijing jail cell after refusing to apologise on behalf of the 8-nation alliance for burning down the Old Summer Palace in 1860.
-            <br />
-            <Emoji text=":police_officer:" />
+            I once smuggled a 2.2m man into a music festival using a suitcase
+            and a fake ID.
           </>
         )
         break
-      case 26:
-        return (
-          <>
-            I sometimes like to sleep halfway down the bed so that my feet dangle off the end because it makes me feel tall.
-            <br />
-            <Emoji text=":sleeping_bed:" />
-          </>
-        )
-        break
-      case 27:
-        return (
-          <>
-            My hand-eye coordination is so bad that I brush my teeth by moving my head instead of moving the toothbrush.
-            <br />
-            <Emoji text=":tooth:" />
-          </>
-        )
-        break
-      case 28:
-        return (
-          <>
-            Despite 36 years of practice, I'm still no good at tying shoe laces.
-            <br />
-            <Emoji text=":running_shoe:" />
-          </>
-        )
-        break
-      case 29:
-        return (
-          <>
-            I once smuggled a 2.2m man into a music festival using a suitcase and a fake ID.
-          </>
-        )
-          break
       default:
         return (
           <>
             I used to be a&nbsp;
-            <Link href="https://www.youtube.com/watch?v=8myh_7RrAck" title="Watch me in action!">
+            <Link
+              href="https://www.youtube.com/watch?v=8myh_7RrAck"
+              title="Watch me in action!"
+            >
               TV weatherman
             </Link>
             <br />
