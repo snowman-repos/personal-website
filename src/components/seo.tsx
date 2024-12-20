@@ -175,7 +175,7 @@ function SEO({
             "gender": "male",
             "sameAs": [
               "https://www.linkedin.com/in/darrylsnow/",
-              "https://github.com/darryl-snow/",
+              "https://github.com/snowman-repos",
             ],
             "knowsLanguage": [
               {

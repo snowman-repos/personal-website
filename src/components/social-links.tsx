@@ -11,7 +11,7 @@ const ContactMethods = [
   },
   {
     icon: 'github',
-    link: 'https://github.com/darryl-snow?tab=repositories',
+    link: 'https://github.com/snowman-repos',
     title: 'See my Github Repos',
   },
   {
